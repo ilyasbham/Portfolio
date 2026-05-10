@@ -6,9 +6,7 @@
   --primary-gradient: linear-gradient(red, #dc38be);
 }
 
-* {
-  cursor: url("/cursor.png"), auto;
-}
+
 
 .text-gradient {
   background: var(--primary-gradient);
