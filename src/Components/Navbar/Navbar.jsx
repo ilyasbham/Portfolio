@@ -9,9 +9,11 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="w-full fixed top-0 left-0 text-[#be3658] flex items-center justify-between px-6 md:px-20 py-4 ">
+    <nav className="w-full fixed top-0 left-0 text-[#be3658] flex items-center justify-between px-6 md:px-20 py-4 z-50 bg-transparent">
 
-      <span className="text-xl font-bold text-white"><span className="text-[#bd3658]">ilyas's</span> Portfolio</span>
+      <span className="text-xl font-bold text-white">
+        <span className="text-[#bd3658]">ilyas's</span> Portfolio
+      </span>
 
       {/* Desktop */}
       <ul className="hidden md:flex gap-10 text-lg font-semibold cursor-pointer">
@@ -19,14 +21,15 @@ const Navbar = () => {
         <li onClick={() => scrollToSection('experience')} className="hover:text-fuchsia-600">Experience</li>
         <li onClick={() => scrollToSection('projects')} className="hover:text-fuchsia-600">Projects</li>
         <li onClick={() => scrollToSection('footer')} className="hover:text-fuchsia-600">Contact</li>
-                <li onClick={() => scrollToSection('reviews')} className="hover:text-fuchsia-600">Review</li>
-                                <li onClick={() => scrollToSection('skills')} className="hover:text-fuchsia-600">Skills</li>
-
-
+        <li onClick={() => scrollToSection('reviews')} className="hover:text-fuchsia-600">Review</li>
+        <li onClick={() => scrollToSection('skills')} className="hover:text-fuchsia-600">Skills</li>
       </ul>
 
       {/* Mobile Button */}
-      <div className="md:hidden flex flex-col gap-1 cursor-pointer" onClick={() => setMenuOpen(!menuOpen)}>
+      <div
+        className="md:hidden flex flex-col gap-1 cursor-pointer z-50 relative"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
         <span className="w-6 h-0.5 bg-[#bd3658]"></span>
         <span className="w-6 h-0.5 bg-[#bd3658]"></span>
         <span className="w-6 h-0.5 bg-[#bd3658]"></span>
@@ -34,11 +37,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <ul className="absolute top-16 left-0 right-0 bg-black flex flex-col items-center gap-6 py-6 text-lg font-semibold md:hidden">
+        <ul className="absolute top-16 left-0 right-0 bg-black flex flex-col items-center gap-6 py-6 text-lg font-semibold md:hidden z-40">
           <li onClick={() => scrollToSection('about')}>About</li>
           <li onClick={() => scrollToSection('experience')}>Experience</li>
           <li onClick={() => scrollToSection('projects')}>Projects</li>
-          <li onClick={() => scrollToSection('contact')}>Contact</li>
+          <li onClick={() => scrollToSection('footer')}>Contact</li>
+          <li onClick={() => scrollToSection('reviews')}>Review</li>
+          <li onClick={() => scrollToSection('skills')}>Skills</li>
         </ul>
       )}
     </nav>

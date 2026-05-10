@@ -38,7 +38,7 @@ const Home = () => {
   }, [subIndex, deleting, index, roles]);
 
   return (
-    <div className="text-white flex flex-col md:flex-row w-full min-h-screen items-center justify-center p-6 md:p-20 gap-10 relative overflow-hidden">
+    <div className="text-white flex flex-col md:flex-row w-full min-h-screen items-center justify-center pt-28 md:pt-20 p-6 md:p-20 gap-10 relative overflow-hidden z-0">
 
       {/* TOP GLOW */}
       <div className="absolute -top-20 -left-20 w-[250px] h-[250px] rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-20 blur-[100px] animate-pulse"></div>
@@ -98,8 +98,6 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-
-          {/* Contact Button */}
           <a
             href="#footer"
             className="py-3 px-7 rounded-full bg-cyan-400 text-black font-semibold shadow-2xl shadow-cyan-900 hover:scale-105 hover:bg-cyan-300 transition duration-300"
@@ -107,7 +105,6 @@ const Home = () => {
             Contact Me
           </a>
 
-          {/* CV Button */}
           <a
             href="/cv.jpg"
             target="_blank"
@@ -116,13 +113,12 @@ const Home = () => {
           >
             View CV
           </a>
-
         </motion.div>
       </div>
 
       {/* RIGHT SIDE IMAGE */}
       <motion.div
-        className="w-full md:w-1/2 flex justify-center order-1 md:order-2 z-10"
+        className="w-full md:w-1/2 flex justify-center order-1 md:order-2 z-0"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}

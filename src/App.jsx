@@ -14,9 +14,9 @@ import Reviews from './Components/Review/Reviews.jsx'
 function App() {
 
 
-  document.addEventListener("contextmenu", (e) => {
-  e.preventDefault();
-});
+//   document.addEventListener("contextmenu", (e) => {
+//   e.preventDefault();
+// });
   return (
 <div className="relaive bg-black  min-h-screen w-full  overflow-x-hidden">
       <Particle/>
