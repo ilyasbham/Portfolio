@@ -91,7 +91,7 @@ const Education = () => {
           md:hidden
 
           absolute
-          left-4
+          left-6
           top-0
           bottom-0
 
