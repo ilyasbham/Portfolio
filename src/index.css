@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --primary-gradient: linear-gradient(red, #dc38be);
+}
+
+.text-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@layer components {
+  .section-title {
+    @apply text-4xl md:text-3xl font-bold mb-6 text-fuchsia-400;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+body{
+  font-family:"Poppins", sans-serif;
+}
+
+h1,h2{
+  font-family: "Roboto", sans-serif;
+}
+
+@layer utilities {
+
+  .diagonal-blue-gradient {
+    background: linear-gradient(to bottom right,  #003d4d,#00c996);
+  }
+
+  .diagonal-pink-gradient{
+    background: linear-gradient(to bottom right,#ec2F4B,#009FFF);
+  }
+
+  .diagonal-gray-gradient{
+    background: linear-gradient(
+      to top left,
+      #010f16 0%,
+      #000a0f 45%,
+      #132930 70%,
+      #092b3a 100%
+    );
+  }
+
+  .gradient {
+    background: linear-gradient(-45deg,#302b63,#00bf8f,#1cd8d2);
+  }
+
+  .blue-gradient {
+    background: #2774ae;
+    background: -webkit-linear-gradient(to right, #002E5D, #2774ae);
+    background: linear-gradient(to right, #002E5D, #2774ae);
+  }
+}
