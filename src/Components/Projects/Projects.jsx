@@ -2,6 +2,7 @@ import React from "react";
 
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import Ecom from "../../assets/W6.png";
 
 import StudySpot from "../../assets/W5.png";
 import Staff from "../../assets/W3.png";
@@ -47,7 +48,7 @@ const Projects = () => {
 
     {
       title: "E-Commerce Platform",
-      image: StudySpot,
+      image: Ecom,
       desc: "A full-featured online shopping experience.",
 
       features: [
