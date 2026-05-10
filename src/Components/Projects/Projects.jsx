@@ -4,7 +4,7 @@ import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
 import StudySpot from "../../assets/W5.png";
-import Ecom from "../../assets/W2.png";
+import Ecom from "../../assets/w2.png";
 import Staff from "../../assets/W3.png";
 import Complain from "../../assets/W4.png";
 
